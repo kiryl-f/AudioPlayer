@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/songPosterImageView"
+        android:layout_width="500dp"
+        android:layout_height="300dp"
+        android:layout_margin="50dp"
+        tools:background="@android:color/holo_blue_bright"/>
+
+    <TextView
+        android:id="@+id/songTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="45sp"
+        android:textColor="@android:color/black"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/songPosterImageView"
+        tools:text="Куртец"/>
+
+    <TextView
+        android:id="@+id/artistNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songTitleTextView"
+        android:layout_alignStart="@id/songTitleTextView"
+        android:layout_marginTop="8dp"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        tools:text="Кровосток"/>
+    <ImageView
+        android:id="@+id/playStopImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/artistNameTextView"
+        android:src="@drawable/ic_baseline_pause_24"
+        android:layout_centerInParent="true"/>
+
+    <ImageView
+        android:id="@+id/nextSongImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_skip_next_24"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/artistNameTextView"
+        android:layout_marginEnd="30dp"
+        />
+    <ImageView
+        android:id="@+id/prevSongImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_skip_previous_24"
+        android:layout_below="@id/artistNameTextView"
+        android:layout_marginStart="30dp"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playStopImageView"/>
+</RelativeLayout>
